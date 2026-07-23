@@ -15,15 +15,31 @@ public class Automobil {
         this.upaljen=false;
     }
     public void ubrzaj(int novaBrzina){
-        this.trenutnaBrzina=novaBrzina;
+        this.trenutnaBrzina+=novaBrzina;
 
     }
     public void uspori(int novaBrzina){
-        this.trenutnaBrzina=novaBrzina;
+        this.trenutnaBrzina-=novaBrzina;
 
     }
-    public void stani(){
-        this.trenutnaBrzina=0;
+    public void upali(){
+        System.out.println("Automobil je upaljen");
+
+    }
+    public void ugasi(){
+        if(trenutnaBrzina!=0){
+        System.out.println("Automobil je ugašen");}
+        else{
+            System.out.println("Zaustavi auto prije gašenja");
+            //može ovdje biti metoda zaustavi()
+        }
+
+    }
+    public void zaustavi(){
+        while(trenutnaBrzina!=0){
+            uspori(10);
+        }
+        ugasi();
 
     }
 
