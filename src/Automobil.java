@@ -64,7 +64,12 @@ public class Automobil {
     }
 
     public void ubrzaj(int novaBrzina){
-        this.trenutnaBrzina+=novaBrzina;
+        if(upaljen){
+        this.trenutnaBrzina+=novaBrzina;}
+        else{
+            System.out.println("Upali auto");
+            upali();
+        }
 
     }
     public void uspori(int novaBrzina){
