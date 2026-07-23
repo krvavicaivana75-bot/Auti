@@ -22,6 +22,10 @@ public class Automobil {
         this.trenutnaBrzina=novaBrzina;
 
     }
+    public void stani(){
+        this.trenutnaBrzina=0;
+
+    }
 
 
 
