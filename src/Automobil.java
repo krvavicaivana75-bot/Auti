@@ -69,6 +69,7 @@ public class Automobil {
         else{
             System.out.println("Upali auto");
             upali();
+            //
         }
 
     }
