@@ -78,7 +78,7 @@ public class Automobil {
 
     }
     public void ugasi(){
-        if(trenutnaBrzina!=0){
+        if(trenutnaBrzina==0){
         System.out.println("Automobil je ugašen");}
         else{
             System.out.println("Zaustavi auto prije gašenja");
