@@ -74,13 +74,18 @@ public class Automobil {
 
     }
     public void uspori(int novaBrzina){
-        this.trenutnaBrzina-=novaBrzina;
 
-    }
+        this.trenutnaBrzina-=novaBrzina;}
+
+
     public void upali(){
+        if(!isUpaljen()){
         this.upaljen=true;
         System.out.println("Automobil je upaljen");
-        System.out.println("Upalio si auto, postavi brzinu");
+        System.out.println("Upalio si auto, postavi brzinu");}
+        else{
+            System.out.println("Već je upaljen");
+        }
 
     }
     public void ugasi(){
@@ -88,15 +93,16 @@ public class Automobil {
         System.out.println("Automobil je ugašen");}
         else{
             System.out.println("Zaustavi auto prije gašenja");
-            //može ovdje biti metoda zaustavi()
+            zaustavi();
         }
 
     }
     public void zaustavi(){
-        while(trenutnaBrzina!=0){
+        while(trenutnaBrzina>0){
             uspori(10);
+            System.out.println(getTrenutnaBrzina());
         }
-        ugasi();
+        //ugasi();
 
     }
     public void ispisi(){
